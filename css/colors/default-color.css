@@ -678,7 +678,7 @@
     .flexcardNumberBlue {
         background: #FDFFFE;
         background: linear-gradient(135deg, #00bfff, #00bfff);
-        background: -webkit-linear-gradient(135deg, #00bfff, #00bfff);
+        background: -webkit-linear-gradient(135deg, #1a4959, #00bfff);
         background: -moz-linear-gradient(135deg, #00bfff, #00bfff);
         box-shadow: 0px 2px 2px #00bfff;
    }
@@ -686,7 +686,7 @@
        background: #00bfff ;
    }
    .flexcardNumberBlue:after {
-       background: #00bfff;
+       background: #0790bd;
    }
     .flexcardBlue {
         background: #fff;
