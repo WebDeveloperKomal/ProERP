@@ -189,6 +189,8 @@ body {
 	color: var(--body-text-color);
 	background: #ffffff;
 	font-family: 'Lato', sans-serif;
+	background: #fdfdfd url('images/bg-texture.avif') repeat;
+
 }
 
 body.dc-six {
@@ -3691,11 +3693,11 @@ ul.three-col li {
 06.) Footer CSS
 /**----------------------------------------------**/
 .main-footer {
-	padding: 100px 0px;
-	background-size: cover;
-	background-position: top center;
-	font-size: 16px;
-	line-height: 1.5;
+    padding: 113px 2px 36px 0px;
+    background-size: cover;
+    background-position: top center;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .main-footer a {
@@ -3768,7 +3770,7 @@ ul.three-col li {
 .copyright-bar {
 	padding: 20px 0px;
 	font-size: 16px;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	/* border-top: 1px solid rgba(0, 0, 0, 0.1); */
 }
 
 .social-media-links li:hover a:before {
@@ -3938,7 +3940,7 @@ ul.three-col li {
 .footer-theme-two .copyright-bar,
 .footer-theme-three .copyright-bar,
 .footer-theme-eight .copyright-bar {
-	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	/* border-top: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
 .about-info img {
