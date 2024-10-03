@@ -240,7 +240,7 @@
                             </li> -->
                         <!-- **** Services ********* -->
                         <li class="menu-item menu-item-has-children mega-menu active">
-                            <a href="#">Services</a>
+                           <a href="page-services.html">Services</a>
                             <ul class="sub-menu mega-menu-inner">
                                 <li class="menu-item col-title">
                                     <a href="#" style="background-color: #e0e0e0;">Education</a>
