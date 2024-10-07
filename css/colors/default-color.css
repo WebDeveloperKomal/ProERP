@@ -279,7 +279,7 @@ a {
 }
 
 .footer-theme-one {
-    background: url('../../images/Footer-1.png') no-repeat scroll center top;
+    background: url('/images/Footer-1.png') no-repeat scroll center top;
     background-size: cover;
 }
 
