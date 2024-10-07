@@ -5,6 +5,7 @@
    Version: 1.6
    File Description: Green Color CSS File
 */
+
 ::-moz-selection {
     /** Code for Firefox **/
     color: #ffffff;
@@ -273,7 +274,7 @@ a {
 }
 
 .cta-section {
-    background: url('../../images/default-color/bg-2.jpg') no-repeat scroll center bottom;
+    background: url('../../images/default-color/bg-2.png') no-repeat scroll center bottom;
     background-size: cover;
 }
 
@@ -727,7 +728,6 @@ blockquote::before {
         background: url('../../images/default-color/footer-bg-1-mobile.png') no-repeat scroll center top;
         background-size: cover;
     }
-
     #navigation .menu-primary li.menu-item:hover>a,
     #navigation .menu-primary li.menu-item.active>a {
         opacity: 1;
@@ -735,7 +735,9 @@ blockquote::before {
     }
 }
 
+
 /**----------------- new pricing table add -------------------**/
+
 .pricing-palden .pricing-deco {
     border-radius: 10px 10px 0 0;
     background: linear-gradient(135deg, #42e69463, #00bfff72);
@@ -758,7 +760,9 @@ blockquote::before {
     background: linear-gradient(135deg, #00bfff, #00bfff) !important;
 }
 
+
 /**----------------- new second pricing css -------------------**/
+
 .pricing-card {
     flex: 1;
     max-width: 360px;
@@ -797,7 +801,9 @@ blockquote::before {
     color: #00bfff;
 }
 
+
 /**------------------ new content box four css ---------------**/
+
 .service-card .icon-wrapper {
     background-color: #ffffff;
     color: #00bfff;
@@ -827,7 +833,9 @@ blockquote::before {
     transform: scale(1.1);
 }
 
+
 /**----------------- new content box five css --------------------**/
+
 .flexcardNumberBlue {
     background: #FDFFFE;
     background: linear-gradient(135deg, #00bfff, #00bfff);
@@ -849,7 +857,9 @@ blockquote::before {
     box-shadow: 2px 4px 1px #42e69452;
 }
 
+
 /**------------------------- testimonial new css -------------------**/
+
 .carousel-inner {
     border-radius: 20px;
     border: 2px solid #00bfff;
@@ -913,7 +923,9 @@ blockquote::before {
     background-position: right center;
 }
 
+
 /**----------------------- new countdown css --------------------**/
+
 .time div {
     width: 150px;
     height: 150px;
@@ -923,7 +935,9 @@ blockquote::before {
     place-content: center;
 }
 
+
 /**---------------------- new tabbing section css -------------------**/
+
 .no_wrap {
     text-align: center;
     color: #00bfff;
@@ -937,6 +951,7 @@ blockquote::before {
 .tab_container [id^="tab"]:checked+label .fa {
     color: #00bfff;
 }
+
 
 /**----------------------- new accordion section css ----------------**/
 
@@ -960,7 +975,9 @@ blockquote::before {
     border-left: 4px solid #00bfff;
 }
 
+
 /**----------------- new counter section css -------------------**/
+
 .container-new {
     width: 100%;
     height: auto;
@@ -995,4 +1012,3 @@ blockquote::before {
     top: -12px;
     line-height: 0.8;
 }
-
