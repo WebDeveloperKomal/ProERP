@@ -274,7 +274,7 @@ a {
 }
 
 .cta-section {
-    background: url('../../images/default-color/bg-2.png') no-repeat scroll center bottom;
+    background: url('../../images/b2b-banner.jpg') no-repeat scroll center bottom;
     background-size: cover;
 }
 
@@ -476,7 +476,7 @@ a {
 }
 
 .fact-section:before {
-    background: url('../../images/default-color/traiangle-transparent-bg.png') no-repeat scroll bottom center;
+    background: url('../../images/default-color/traiangle-transparent-bg@3x 1.png') no-repeat scroll bottom center;
     background-size: auto;
     content: "";
     height: 100%;
