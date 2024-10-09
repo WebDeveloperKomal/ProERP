@@ -1494,11 +1494,11 @@ textarea.form-control {
 .page-header.dc-six:after {
     content: "";
     position: absolute;
-    left: 60%;
-    top: -100px;
+    left: 40%;
+    top: -60px;
     transform: translateX(-50%);
     background-position: center top;
-    width: 100%;
+    width: 119%;
     height: 100%;
     background-repeat: no-repeat;
 }
@@ -5754,8 +5754,8 @@ blockquote::before {
         height: 100%;
         left: -16%;
         width: 120%;
-        top: -36%;
-        transform: rotate(-18deg);
+        top: -25%;
+        transform: rotate(0deg);
     }
     .page-header.dc-six::after {
         background-size: 100% auto;
@@ -6067,7 +6067,7 @@ blockquote::before {
         display: none;
     }
     .page-header.dc-six::before {
-        width: 140%;
+        width: 130%;
         left: -30%;
     }
     .page-header.dc-seven::before {
