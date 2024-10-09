@@ -1554,7 +1554,7 @@ textarea.form-control {
 }
 
 .section-padding {
-    padding: 50px 0px;
+    padding: 50px 13px;
 }
 
 .page-header {
@@ -3753,13 +3753,13 @@ ul.three-col li {
 }
 
 .social-media-links li a {
-    line-height: 46px;
-    width: 48px;
-    height: 48px;
+    line-height: 37px;
+    width: 34px;
+    height: 38px;
     display: block;
-    font-size: 24px;
+    font-size: 19px;
     -webkit-border-radius: 6px;
-    border-radius: 6px;
+    border-radius: 10px;
     text-align: center;
     border: 1px solid var(--light-gray);
     position: relative;
@@ -3916,9 +3916,9 @@ ul.three-col li {
 }
 
 .footer-nav li {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     position: relative;
-    padding-left: 30px;
+    padding-left: 20px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
