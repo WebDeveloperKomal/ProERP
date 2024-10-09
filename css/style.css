@@ -195,7 +195,7 @@ body {
     color: var(--body-text-color);
     background: #ffffff;
     font-family: 'Lato', sans-serif;
-    background: #fdfdfd url('images/OBJECTS.png') repeat;
+    background: #fdfdfd url('images/bg-texture.avif') repeat;
 }
 
 body.dc-six {
