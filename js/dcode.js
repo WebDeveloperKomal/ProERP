@@ -1,15 +1,8 @@
-/** Template Name: DCode - Saas & Software Landing Page Templates
-   Author: SacredThemes
-   Author URL: https://sacredthemes.net
-   Created: August 2020
-   Version: 1.6
-   File Description: Main JS file of the template
-**/
 (function($) {
     "use strict";
     /**---------------------------------------------*
      // *---------------Loader 
-    **---------------------------------------------*/ 
+    **---------------------------------------------*/
     $(window).on('load', function() {
         $('#status').fadeOut();
         $('#preloader').delay(350).fadeOut('slow');
@@ -19,27 +12,25 @@
     });
     /**---------------------------------------------*
      //*------------- WOW Animation 
-    **---------------------------------------------**/ 
-    var wow = new WOW(
-        {
-            boxClass:     'wow',      //*------ default
-            animateClass: 'animated', //*------ default
-            offset:       0,          //*------- default
-            mobile:       true,       //*------ default
-            live:         true        //*------ default
-        }
-    );
+    **---------------------------------------------**/
+    var wow = new WOW({
+        boxClass: 'wow', //*------ default
+        animateClass: 'animated', //*------ default
+        offset: 0, //*------- default
+        mobile: true, //*------ default
+        live: true //*------ default
+    });
     wow.init();
     /**---------------------------------------------*
      //*------------- Theme Option
-    **---------------------------------------------*/ 
-    $("#theme-option .switcher-btn a.settings").click(function(e){
+    **---------------------------------------------*/
+    $("#theme-option .switcher-btn a.settings").click(function(e) {
         e.preventDefault();
         var div = $("#theme-option");
         if (div.css("left") === "-200px") {
             $("#theme-option").animate({
                 left: "0px"
-            }); 
+            });
         } else {
             $("#theme-option").animate({
                 left: "-200px"
@@ -48,10 +39,10 @@
     });
     $(document).click(function(event) {
         if (!$(event.target).closest("#theme-option").length) {
-            $("body").find("#theme-option").animate({"left":"-200px"});
+            $("body").find("#theme-option").animate({ "left": "-200px" });
         }
     });
-    $(".pattern-color-list a" ).click(function(e){
+    $(".pattern-color-list a").click(function(e) {
         e.preventDefault();
         var ThemeColorFile = $(this).data('url');
         $("#theme-color").attr("href", 'css/colors/' + ThemeColorFile + '.css');
@@ -60,58 +51,59 @@
         changeImagePath(ThemeColorFile);
         return false;
     });
-    function changeImagePath(colorValue){
+
+    function changeImagePath(colorValue) {
         var img = $("img").each(function() {
             var src = $(this).attr("src");
-            var path = src.substring(0,src.lastIndexOf('/')); 
+            var path = src.substring(0, src.lastIndexOf('/'));
             var fileName = src.substring(src.lastIndexOf('/'));
-            var newSrc = path+"/large"+fileName;
-            if(path !== "images"){
+            var newSrc = path + "/large" + fileName;
+            if (path !== "images") {
                 var newSrc = "images/" + colorValue + fileName;
-                $(this).attr("src",newSrc);
+                $(this).attr("src", newSrc);
             }
         });
     }
-    $(".layout-option a" ).click(function(e){
+    $(".layout-option a").click(function(e) {
         e.preventDefault();
-        if($(this).hasClass('rtl-version')){
+        if ($(this).hasClass('rtl-version')) {
             $("#rtl-theme-default").removeAttr("disabled");
-        }else{
+        } else {
             $("#rtl-theme-default").attr("disabled", "disabled");
         }
         $('.layout-option a').addClass('enable');
         $(this).removeClass('enable');
         return false;
     });
-    
+
     /**---------------------------------------------*
      //*------------- Search Option
-    **---------------------------------------------*/ 
-    $('.search-btn a').click(function(e){
+    **---------------------------------------------*/
+    $('.search-btn a').click(function(e) {
         e.preventDefault();
         $('.overlay.overlay-search').addClass('open');
     });
-    $('.close-search').click(function(e){
+    $('.close-search').click(function(e) {
         e.preventDefault();
         $('.overlay.overlay-search').removeClass('open');
     });
-    
+
     $(document).keydown(function(e) {
         //*-------------- ESCAPE key pressed
         if (e.keyCode === 27) {
-            if ($('.overlay.overlay-search').hasClass('open')){
+            if ($('.overlay.overlay-search').hasClass('open')) {
                 $('.overlay.overlay-search').removeClass('open');
             }
         }
     });
     /**---------------------------------------------*
      //*-------------- Sticky Nav
-    **---------------------------------------------*/ 
+    **---------------------------------------------*/
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll >= 150) {
             $("header.navbar").addClass("menu-fixed");
-        }else{
+        } else {
             $("header.navbar").removeClass("menu-fixed");
         }
     });
@@ -124,7 +116,7 @@
             $(".navbar-right").appendTo("#navigation");
             $('<span class="close-btn"></span>').prependTo("#navigation");
         }
-        $(window).resize(function () {
+        $(window).resize(function() {
             if (viewportWidth < 992) {
                 $(".navbar-right").appendTo("#navigation");
                 $('<span class="close-btn"></span>').prependTo("#navigation");
@@ -136,7 +128,7 @@
         $('#navigation').addClass('open');
         $('body').addClass('navigation-in');
     });
-    $(document).on("click","#navigation .close-btn, #navigation a",function() {
+    $(document).on("click", "#navigation .close-btn, #navigation a", function() {
         $('.menu-toggle-btn').removeClass('active');
         $('#navigation').removeClass('open');
         $('body').removeClass('navigation-in');
@@ -162,7 +154,7 @@
     });
     /**---------------------------------------------*
      //*--------- Testimonial slider
-    **---------------------------------------------*/ 
+    **---------------------------------------------*/
     $('.theme-one .testimonial-slider').slick({
         dots: false,
         arrows: true,
@@ -179,16 +171,15 @@
         speed: 600,
         slidesToShow: 3,
         slidesToScroll: 1,
-        responsive: [
-            {
-            breakpoint: 1024,
+        responsive: [{
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
             {
-            breakpoint: 767,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -214,27 +205,24 @@
         speed: 600,
         slidesToShow: 2,
         slidesToScroll: 1,
-        responsive: [
-            {
+        responsive: [{
             breakpoint: 991,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
-        ]
+        }]
     });
     $('.testimonial_inner').slick({
         dots: true,
         infinite: false,
         speed: 300,
-        slidesToShow:2,
+        slidesToShow: 2,
         slidesToScroll: 2,
         autoplay: true,
         prevArrow: false,
         nextArrow: false,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
@@ -266,7 +254,7 @@
     });
     /**---------------------------------------------*
      //*----------- Screen Shot slider
-    **---------------------------------------------*/ 
+    **---------------------------------------------*/
     $('.screenshot-slider').slick({
         dots: false,
         arrows: true,
@@ -290,30 +278,29 @@
         speed: 600,
         slidesToShow: 5,
         slidesToScroll: 1,
-        responsive: [
-            {
-            breakpoint: 1199,
+        responsive: [{
+                breakpoint: 1199,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
                 }
             },
             {
-            breakpoint: 1024,
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
             {
-            breakpoint: 600,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
-            breakpoint: 400,
+                breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -334,9 +321,8 @@
         speed: 600,
         slidesToShow: 4,
         slidesToScroll: 1,
-        responsive: [
-            {
-            breakpoint: 1199,
+        responsive: [{
+                breakpoint: 1199,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -344,21 +330,21 @@
                 }
             },
             {
-            breakpoint: 1024,
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
             {
-            breakpoint: 600,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
             },
             {
-            breakpoint: 400,
+                breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -368,13 +354,13 @@
     });
     /**---------------------------------------------*
      //*--------- Fact Counter + Text Count
-    **---------------------------------------------*/ 
-    if($('.counter').length){
-        $('.counter').appear(function(){
+    **---------------------------------------------*/
+    if ($('.counter').length) {
+        $('.counter').appear(function() {
             var $t = $(this),
                 n = $t.find(".counter-number").attr("data-stop"),
                 r = parseInt($t.find(".counter-number").attr("data-speed"), 10);
-                if (!$t.hasClass("counted")) {
+            if (!$t.hasClass("counted")) {
                 $t.addClass("counted");
                 $({
                     countNum: $t.find(".counter-number").text()
@@ -391,12 +377,12 @@
                     }
                 });
             }
-        },{accY: 0});
+        }, { accY: 0 });
     }
     /**---------------------------------------------*
      //*----------------- Filter
-    **---------------------------------------------*/ 
-    if($('.grid').length > 0){
+    **---------------------------------------------*/
+    if ($('.grid').length > 0) {
         var $grid = jQuery('.grid').isotope({
             //*------------- options
             itemSelector: '.grid-item',
@@ -405,52 +391,52 @@
 
         //*------------ change is-checked class on buttons
         var $buttonGroup = $('.filters');
-        $buttonGroup.on( 'click', 'li', function( event ) {
+        $buttonGroup.on('click', 'li', function(event) {
             $buttonGroup.find('.is-checked').removeClass('is-checked');
-            var $button = $( event.currentTarget );
+            var $button = $(event.currentTarget);
             $button.addClass('is-checked');
             var filterValue = $button.attr('data-filter');
             $grid.isotope({ filter: filterValue });
         });
-        jQuery(window).load(function(){
+        jQuery(window).load(function() {
             jQuery('.filters ul .is-checked').click();
         });
     }
 
-    
+
     /**---------------------------------------------*
      //*------------- CountDown
-    **---------------------------------------------*/ 
-    if($('#clock').length > 0){
+    **---------------------------------------------*/
+    if ($('#clock').length > 0) {
         var DateTime = $('#clock').data('date');
         const second = 1000,
             minute = second * 60,
             hour = minute * 60,
             day = hour * 24;
-            let countDown = new Date(DateTime).getTime(),
-            x = setInterval(function() {    
-            let now = new Date().getTime(),
-                distance = countDown - now;
-            document.getElementById('days').innerText = Math.floor(distance / (day)),
-            document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-        }, second);
+        let countDown = new Date(DateTime).getTime(),
+            x = setInterval(function() {
+                let now = new Date().getTime(),
+                    distance = countDown - now;
+                document.getElementById('days').innerText = Math.floor(distance / (day)),
+                    document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                    document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                    document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+            }, second);
     }
     /**---------------------------------------------*
      //*---------------- Upload
-    **---------------------------------------------*/ 
-    jQuery('input#upload').change(function(){
+    **---------------------------------------------*/
+    jQuery('input#upload').change(function() {
         var tmpval = jQuery(this).val();
         var ms = this.value.replace(/^.*\\/, '');
         jQuery('.upload-path #upload-res').text(ms)
-        if(tmpval == '') {
+        if (tmpval == '') {
             jQuery('.upload-path').removeClass('not-empty');
         } else {
             jQuery('.upload-path').addClass('not-empty');
         }
     });
-    jQuery('.upload-close').click(function(){
+    jQuery('.upload-close').click(function() {
         jQuery('.upload-path #upload-res').text('');
         jQuery('#upload').val('');
         jQuery('.upload-path').removeClass('not-empty');
@@ -458,10 +444,10 @@
     /**---------------------------------------------*
      //*------------- Mobile Tabs
     **---------------------------------------------*/
-    if($(window).width() < 767 ){
-        $('.st-tab-btn').each(function(){
+    if ($(window).width() < 767) {
+        $('.st-tab-btn').each(function() {
             var ActiveTabName = $(this).find('.nav-link.active').text();
-            $('<div class="select-filter">'+ActiveTabName+'</div>').prependTo(this).find('.st-tab-btn');
+            $('<div class="select-filter">' + ActiveTabName + '</div>').prependTo(this).find('.st-tab-btn');
         });
         $('.select-filter').click(function() {
             $(this).next('ul').slideToggle('600');
@@ -482,6 +468,7 @@
             }
         });
     });
+
     function isScrolledIntoView(elem) {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
@@ -489,22 +476,22 @@
         var elemBottom = elemTop + $(elem).height();
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
-    })(jQuery);
+})(jQuery);
 /**---------------------------------------------*
  //*---------- eQual Height
 **---------------------------------------------*/
-equalheight = function(container){
-var currentTallest = 0,
-    currentRowStart = 0,
-    rowDivs = new Array(),
-    $el,
-    topPosition = 0;
+equalheight = function(container) {
+    var currentTallest = 0,
+        currentRowStart = 0,
+        rowDivs = new Array(),
+        $el,
+        topPosition = 0;
     jQuery(container).each(function() {
         $el = jQuery(this);
         jQuery($el).height('auto')
         topPostion = $el.position().top;
         if (currentRowStart != topPostion) {
-            for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
                 rowDivs[currentDiv].height(currentTallest);
             }
             rowDivs.length = 0; //*--------- empty the array
@@ -515,7 +502,7 @@ var currentTallest = 0,
             rowDivs.push($el);
             currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
         }
-        for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
             rowDivs[currentDiv].height(currentTallest);
         }
     });
@@ -523,7 +510,7 @@ var currentTallest = 0,
 jQuery(window).load(function() {
     equalheight('.theme-two .testimonial-text');
 });
-jQuery(window).resize(function(){
+jQuery(window).resize(function() {
     equalheight('.theme-two .testimonial-text');
 });
 
@@ -534,29 +521,29 @@ const hour = document.getElementById("hour");
 const day = document.getElementById("day");
 const wrapper = document.getElementById("wrapper");
 
-setInterval(function(){
-  let secondNum = +second.innerText;
-  let minuteNum = +minute.innerText;
-  let hourNum = +hour.innerText;
-  let dayNum = +day.innerText;
-  
-  second.innerText = secondNum - 1;
-  
-  if(second.innerText == -1){
-    second.innerText = 59;
-    minute.innerText = minuteNum - 1;
-  }
-  
-  if(minute.innerText == -1){
-    minute.innerText = 59;
-    hour.innerText = hourNum - 1;
-  }
-  
-  if(hour.innerText == -1){
-    hour.innerText = 23;
-    day.innerText = dayNum - 1;
-  }
-  
+setInterval(function() {
+    let secondNum = +second.innerText;
+    let minuteNum = +minute.innerText;
+    let hourNum = +hour.innerText;
+    let dayNum = +day.innerText;
+
+    second.innerText = secondNum - 1;
+
+    if (second.innerText == -1) {
+        second.innerText = 59;
+        minute.innerText = minuteNum - 1;
+    }
+
+    if (minute.innerText == -1) {
+        minute.innerText = 59;
+        hour.innerText = hourNum - 1;
+    }
+
+    if (hour.innerText == -1) {
+        hour.innerText = 23;
+        day.innerText = dayNum - 1;
+    }
+
 }, 1000)
 
 //*-------------------- new counter section js (element-counter page)
@@ -564,14 +551,14 @@ let valueDisplays = document.querySelectorAll(".num");
 let interval = 5000;
 
 valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
-  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-  let duration = Math.floor(interval / endValue);
-  let counter = setInterval(function () {
-    startValue += 1;
-    valueDisplay.textContent = startValue;
-    if (startValue == endValue) {
-      clearInterval(counter);
-    }
-  }, duration);
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function() {
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if (startValue == endValue) {
+            clearInterval(counter);
+        }
+    }, duration);
 });

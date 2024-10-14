@@ -1,13 +1,3 @@
-/*
- * jQuery.appear
- * https://github.com/bas2k/jquery.appear/
- * http://code.google.com/p/jquery-appear/
- * http://bas2k.ru/
- *
- * Copyright (c) 2009 Michael Hixson
- * Copyright (c) 2012-2014 Alexander Brovikov
- * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
- */
 (function($) {
     $.fn.appear = function(fn, options) {
 
@@ -124,7 +114,8 @@
         //process the queue
         checkAll: function() {
             var length = $.fn.appear.checks.length;
-            if (length > 0) while (length--) ($.fn.appear.checks[length])();
+            if (length > 0)
+                while (length--)($.fn.appear.checks[length])();
         },
 
         //check the queue asynchronously
@@ -137,7 +128,8 @@
     //run checks when these methods are called
     $.each(['append', 'prepend', 'after', 'before', 'attr',
         'removeAttr', 'addClass', 'removeClass', 'toggleClass',
-        'remove', 'css', 'show', 'hide'], function(i, n) {
+        'remove', 'css', 'show', 'hide'
+    ], function(i, n) {
         var old = $.fn[n];
         if (old) {
             $.fn[n] = function() {
