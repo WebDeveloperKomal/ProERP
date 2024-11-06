@@ -547,11 +547,12 @@ a {
     color: #ffffff;
 }
 
-.inner-page-header {
+
+/* .inner-page-header {
     position: relative;
     background: url('../../images/default-color/half-circle-bg.png') no-repeat scroll bottom center;
     background-size: cover;
-}
+} */
 
 .st-team-member.theme-one .member-position {
     color: #00bfff;
