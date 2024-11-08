@@ -264,7 +264,7 @@ a {
     background-size: cover;
     content: "";
     height: 425px;
-    width: 100%;
+    width: 99%;
     position: absolute;
     top: 0;
 }
