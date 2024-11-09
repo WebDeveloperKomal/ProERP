@@ -7318,3 +7318,92 @@ span.text {
         padding: 6px 15px;
     }
 }
+
+
+/* Position the Back-to-Top button on the right */
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Set it to the right side */
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 14px;
+    font-size: 17px;
+    width: 50px;
+    cursor: pointer;
+    display: none;
+    /* Initially hidden */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Hover effect for the Back-to-Top button */
+
+#backToTopBtn:hover {
+    background-color: #ff9900;
+}
+
+
+/* Position the WhatsApp button on the left */
+
+#whatsappBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    width: 49px;
+    border-radius: 50%;
+    padding: 11px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Hover effect for the WhatsApp button */
+
+#whatsappBtn:hover {
+    background-color: #128c7e;
+}
+
+
+/* Make sure both buttons remain at the bottom and are responsive on smaller screens */
+
+@media (max-width: 768px) {
+    #backToTopBtn {
+        right: 15px;
+        bottom: 15px;
+        font-size: 18px;
+        padding: 12px;
+    }
+    #whatsappBtn {
+        left: 15px;
+        bottom: 15px;
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #backToTopBtn {
+        right: 10px;
+        bottom: 10px;
+        font-size: 16px;
+        padding: 10px;
+    }
+    #whatsappBtn {
+        left: 10px;
+        bottom: 10px;
+        font-size: 16px;
+        padding: 10px;
+    }
+}
