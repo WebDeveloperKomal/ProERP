@@ -1013,3 +1013,7 @@ blockquote::before {
     top: -12px;
     line-height: 0.8;
 }
+
+.img-align {
+    text-align: center;
+}
