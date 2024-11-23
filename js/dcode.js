@@ -562,3 +562,22 @@ valueDisplays.forEach((valueDisplay) => {
         }
     }, duration);
 });
+
+$(document).ready(function() {
+    // Set the initial behavior where only one panel can be open at a time
+    $('#accordion .panel-heading a').on('click', function() {
+        var $this = $(this);
+        var $target = $this.attr('href');
+
+        // If the target panel is already open, close it
+        if ($($target).hasClass('in')) {
+            return false;
+        }
+
+        // Close all panels first
+        $('#accordion .panel-collapse').collapse('hide');
+
+        // Now, open the clicked panel
+        $($target).collapse('show');
+    });
+});
